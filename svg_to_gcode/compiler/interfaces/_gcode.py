@@ -39,7 +39,7 @@ class Gcode(Interface):
 
         if self._current_speed != self._next_speed:
             self._current_speed = self._next_speed
-            command += f" F{self._current_speed}"
+        command += f" F{self._current_speed}"
 
         # Move if not 0 and not None
         command += f" X{x:.{self.precision}f}" if x is not None else ''
